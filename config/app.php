@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'a3',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,7 +180,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
-        
+
 
     ],
 

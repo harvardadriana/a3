@@ -11,163 +11,62 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <style>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-            /*  RESET CSS  
-             *****************/
-            body, img, label, input, legend, fieldset  {
-                padding: 0;
-                margin: 0;
-            }
-
-
-            /*  LAYOUT  
-             *****************/
-            #left {
-                float: left;
-                width: 50%;
-                height: 100vh;
-                color: #fff;
-                background-color: #3B3E71;
-                text-align: center; 
-            }
-
-            #right {    
-                float: right;
-                width: 50%;
-                height: 100vh;
-                background-color: #fafafa;
-            }
-
-
-            /*  GENERAL STYLES  
-             *****************/
-            h1 {
-                margin-top: 90px;
-                font-size: 43px;
-                letter-spacing: 0.4em;
-            }
-
-            h2 {
-                font-size: 32px;
-                margin-bottom: 45px;
-            }
-
-            img {
-                width: 400px;
-                height: auto;
-                margin-bottom: 16px;
-            }
-
-
-            /*  FORMS
-             *****************/
-            label.textinput, 
-            input.textinput, 
-            legend, fieldset {
-                display: block;
-                margin: 0 auto; 
-            }
-
-            label.textinput {
-                width: 250px;
-                margin-top: 5em;
-                text-align: center; 
-                font-weight: bold;
-            }
-
-            input.textinput {
-                margin-top: .5em;
-                width: 250px;
-                height: 50px;
-                border-radius: 5px;
-                font-size: 1.8em;
-                padding: 8px;
-            }
-
-            fieldset {
-                width: 250px;
-                margin-top: 32px;
-                background-color: #fff;
-                padding: 18px 8px;
-                border-radius: 5px;
-                color: #54555b;
-            }
-
-            #bonus label {
-                display: block;
-            }
-
-            #bonus input, #bingo input {
-                margin-right: 10px;
-                margin-left: 30px;
-            }
-
-            #note {
-                font-size: small;
-            }
-
-            input[type="submit"] {
-                display: block;
-                margin: 0 auto;
-                margin-top: 25px;
-                width: 130px;
-                height: 40px;
-                background-color: #d7d8e2;
-                border-radius: 10px;
-            }
-
-
-            /*  WARNINGS/MESSAGES
-             *****************/
-            .required {
-                color: red;
-                font-style: italic;
-            }
-
-            .errors {
-                color: red;
-                font-style: italic;
-                text-align: center;
-                font-weight: bold;
-            }
-
-            .results {
-                width: 350px;
-                margin: 0 auto;
-                margin-top: 50px;
-                padding: 7px 40px;
-                color: #fff;
-                font-size: 150%;
-                background-color: #75779b;
-                border-radius: 15px;
-                text-align: center;
-            }
-
-
-            /* MEDIA QUERIES
-             *******************/
-            @media only screen and (max-width: 1200px) {
-                body {
-                    min-width: 1200px;
-                }
-
-                label.textinput {
-                    margin-top: 2em;
-                }
-
-                fieldset {
-                    margin-top: 20px;
-                }
-            }
-
-        </style>
     </head>
     <body>
 
         <main>
 
-            <h1>Hello world</h1>
+            <div id="left">
+                <h1>DWA SCRABBLE </h1>
+                <h2>Word Score Calculator</h2>
+                <!-- <img> wrapped in <p> tag for semantic reasons -->
+                <p><img src="images/scrabble.jpg" alt="Tiles - Wooden Letters" /></p>
+            </div>
+ 
+            <div id="right">
+                <form method="GET" action="/">
+
+                    <!-- YOUR WORD: get user input -->
+                    <label for="word" class="textinput required" >&#42;Required</label>
+                    <input type="text" name="word" id="word" class="textinput" maxlength="15" placeholder="Type your word" required value="" /><br />
+
+                    <!-- DISPLAYS ERROR MESSAGES: field required and letters only -->
+                    <?php if($errors): ?>
+                        <div class="errors">
+                            <?php foreach($errors as $error): ?>
+                                <?=$error?><br />
+                            <?php endforeach; ?>                        
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- BONUS POINT -->
+                    <fieldset>
+                        <legend>Bonus point</legend>
+                        <div id="bonus">
+                            <label><input type="radio" name="bonus" value="none" checked />None</label>
+                            <label><input type="radio" name="bonus" value="double" />Double word score</label>
+                            <label><input type="radio" name="bonus" value="triple" />Triple word score</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- 50 POINT BINGO -->
+                    <fieldset>
+                        <legend>Include 50 point &#34;bingo&#34;&#63;<br /><span id="note">&#40;word that uses all 7 tiles&#41;</span></legend>
+                        <label id="bingo"><input type="checkbox" name="bingo" value="yes">Yes</label>
+                    </fieldset>
+
+                    <!-- SUBMIT BUTTON -->
+                    <input type="submit" name="calculate" value="Calculate" />
+
+                    <!-- DISPLAY SCORE  -->
+                    <p class="results">Score: </p>
+
+
+                </form>
+            </div>
+
 
         </main>
 

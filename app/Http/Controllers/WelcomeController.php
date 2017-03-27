@@ -8,7 +8,6 @@ class WelcomeController extends Controller
 {
 	/**
 	 * GET
-	 * /
 	 */
 	public function __invoke() {
 

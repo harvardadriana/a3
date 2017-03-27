@@ -1,10 +1,21 @@
 <?php
 
 
-Route::get('/', 'WelcomeController');
-
-
-# only display logs in local environment
+/**
+ * log viewer
+ */
 if(config('app.env') == 'local') {
 	Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 }
+
+
+/**
+ * a3/public/
+ */
+Route::get('/{word}/{bonus?}/{calculate?}', 'ScoreCalculatorController@index');
+
+
+/**
+ * a3/public/
+ */
+Route::get('/', 'WelcomeController');

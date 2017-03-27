@@ -1,0 +1,149 @@
+/* My styles */
+
+/*  RESET CSS  
+ *****************/
+body, img, label, input, legend, fieldset  {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/*  LAYOUT  
+ *****************/
+#left {
+    float: left;
+    width: 50%;
+    height: 100vh;
+    background-color: #3B3E71;
+    color: #fff;
+    text-align: center; 
+}
+
+#right {    
+    float: right;
+    width: 50%;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+
+/*  GENERAL STYLES  
+ *****************/
+h1 {
+    font-size: 2.6em;
+    margin-top: 2.2em;
+    letter-spacing: 0.4em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1.4em;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+
+/*  FORMS
+ *****************/
+label.textinput, 
+input.textinput, 
+legend, fieldset {
+    display: block;
+    margin: 0 auto; 
+}
+
+label.textinput {
+    width: 250px;
+    margin-top: 5em;
+    text-align: center; 
+    font-weight: bold;
+}
+
+input.textinput {
+    margin-top: .5em;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.8em;
+    padding: 8px;
+}
+
+fieldset {
+    width: 250px;
+    margin-top: 32px;
+    background-color: #fff;
+    padding: 18px 8px;
+    border-radius: 5px;
+    color: #54555b;
+}
+
+#bonus label {
+    display: block;
+}
+
+#bonus input, 
+#bingo input {
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+#note {
+    font-size: small;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.8em;
+    width: 130px;
+    height: 40px;
+    background-color: #d7d8e2;
+    border-radius: 10px;
+}
+
+
+/*  WARNINGS/MESSAGES
+ *****************/
+.required,
+.errors {
+    color: red;
+    font-style: italic;
+}
+
+.errors {
+    text-align: center;
+    font-weight: bold;
+}
+
+.results {
+    font-size: 150%;    /* 45px */
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 1.7em;  
+    padding: 1em 1.4em;
+    color: #fff;
+    background-color: #75779b;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* MEDIA QUERIES
+ *******************/
+@media only screen and (max-width: 1200px) {
+    body {
+        min-width: 1200px;
+    }
+
+    label.textinput {
+        margin-top: 3em;
+    }
+
+    fieldset {
+        margin-top: 20px;
+    }
+}
