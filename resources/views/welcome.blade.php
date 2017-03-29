@@ -30,7 +30,7 @@
 
                     <!-- YOUR WORD: get user input -->
                     <label for="word" class="textinput required" >&#42;Required</label>
-                    <input type="text" name="word" id="word" class="textinput" maxlength="15" placeholder="Type your word" required value="" /><br />
+                    <input type="text" name="word" id="word" class="textinput" maxlength="15" placeholder="Type your word" required value="{{ $word or '' }}" /><br />
 
                     <!-- DISPLAYS ERROR MESSAGES: field required and letters only -->
                     <?php if($errors): ?>
@@ -45,30 +45,33 @@
                     <fieldset>
                         <legend>Bonus point</legend>
                         <div id="bonus">
-                            <label><input type="radio" name="bonus" value="none" checked />None</label>
-                            <label><input type="radio" name="bonus" value="double" />Double word score</label>
-                            <label><input type="radio" name="bonus" value="triple" />Triple word score</label>
+                            <label><input type="radio" name="bonus" value="none" {{ ($bonus) ? 'none' : '' }} />None</label>
+                            <label><input type="radio" name="bonus" value="double" {{ ($bonus) ? 'double' : '' }} />Double word score</label>
+                            <label><input type="radio" name="bonus" value="triple" {{ ($bonus) ? 'triple' : '' }} />Triple word score</label>
                         </div>
                     </fieldset>
 
+
+
+
                     <!-- 50 POINT BINGO -->
-                    <fieldset>
+                    <fieldset id="addPoints" class="hidden">
                         <legend>Include 50 point &#34;bingo&#34;&#63;<br /><span id="note">&#40;word that uses all 7 tiles&#41;</span></legend>
-                        <label id="bingo"><input type="checkbox" name="bingo" value="yes">Yes</label>
+                        <label id="bingo"><input type="checkbox" name="bingo" {{ ($bingo) ? 'CHECKED' : '' }} >Yes</label>
                     </fieldset>
 
                     <!-- SUBMIT BUTTON -->
                     <input type="submit" name="calculate" value="Calculate" />
 
                     <!-- DISPLAY SCORE  -->
-                    <p class="results">Score: </p>
-
+                    <p class="results">Score: {{ $score }} </p>
 
                 </form>
             </div>
 
-
         </main>
+
+        <script src="js/scripts.js"></script>
 
     </body>
 </html>

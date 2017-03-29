@@ -95,6 +95,10 @@ fieldset {
     font-size: small;
 }
 
+.hidden {
+    display: none;
+}
+
 input[type="submit"] {
     display: block;
     margin: 0 auto;

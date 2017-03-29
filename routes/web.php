@@ -10,12 +10,6 @@ if(config('app.env') == 'local') {
 
 
 /**
- * a3/public/
+ * a3/
  */
-Route::get('/{word}/{bonus?}/{calculate?}', 'ScoreCalculatorController@index');
-
-
-/**
- * a3/public/
- */
-Route::get('/', 'WelcomeController');
+Route::get('/', 'ScoreCalculatorController');
