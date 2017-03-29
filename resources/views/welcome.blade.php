@@ -45,9 +45,9 @@
                     <fieldset>
                         <legend>Bonus point</legend>
                         <div id="bonus">
-                            <label><input type="radio" name="bonus" value="none" {{ ($bonus) ? 'none' : '' }} />None</label>
-                            <label><input type="radio" name="bonus" value="double" {{ ($bonus) ? 'double' : '' }} />Double word score</label>
-                            <label><input type="radio" name="bonus" value="triple" {{ ($bonus) ? 'triple' : '' }} />Triple word score</label>
+                            <label><input type="radio" name="bonus" value="none" {{ ($bonus) ? 'CHECKED' : '' }} />None</label>
+                            <label><input type="radio" name="bonus" value="double" {{ ($bonus) ? 'CHECKED' : '' }} />Double word score</label>
+                            <label><input type="radio" name="bonus" value="triple" {{ ($bonus) ? 'CHECKED' : '' }} />Triple word score</label>
                         </div>
                     </fieldset>
 
