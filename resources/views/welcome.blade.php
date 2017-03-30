@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Scrabble</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css" />
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     </head>
     <body>
@@ -45,9 +45,9 @@
                     <fieldset>
                         <legend>Bonus point</legend>
                         <div id="bonus">
-                            <label><input type="radio" name="bonus" value="none" {{ ($bonus) ? 'CHECKED' : '' }} />None</label>
-                            <label><input type="radio" name="bonus" value="double" {{ ($bonus) ? 'CHECKED' : '' }} />Double word score</label>
-                            <label><input type="radio" name="bonus" value="triple" {{ ($bonus) ? 'CHECKED' : '' }} />Triple word score</label>
+                            <label><input type="radio" name="bonus" value="none" {{ ($bonus == 'none') ? 'CHECKED' : '' }} />None</label>
+                            <label><input type="radio" name="bonus" value="double" {{ ($bonus == 'double') ? 'CHECKED' : '' }} />Double word score</label>
+                            <label><input type="radio" name="bonus" value="triple" {{ ($bonus == 'triple') ? 'CHECKED' : '' }} />Triple word score</label>
                         </div>
                     </fieldset>
 
@@ -56,7 +56,7 @@
 
                     <!-- 50 POINT BINGO -->
                     <fieldset id="addPoints" class="hidden">
-                        <legend>Include 50 point &#34;bingo&#34;&#63;<br /><span id="note">&#40;word that uses all 7 tiles&#41;</span></legend>
+                        <legend>Include 50 point &#34;bingo&#34;&#63;<br /><span class="note">&#40;word that uses all 7 tiles&#41;</span></legend>
                         <label id="bingo"><input type="checkbox" name="bingo" {{ ($bingo) ? 'CHECKED' : '' }} >Yes</label>
                     </fieldset>
 

@@ -9,7 +9,7 @@
 # CONFIGURATION
 #
 # Update to be the path to your application on DigitalOcean
-appPath='/var/www/html/foobooks'
+appPath='/var/www/html/a3'
 
 # Update to reflect how you SSH into your DigitalOcean server
 sshLogin=harvardadriana@thecodelab.me
