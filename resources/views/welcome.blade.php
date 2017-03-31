@@ -52,7 +52,7 @@
                     </fieldset>
 
                     <!-- 50 POINT BINGO -->
-                    <fieldset id="addPoints" class="hidden">
+                    <fieldset id="addPoints" class={{ $Hidden }} >
                         <legend>Include 50 point &#34;bingo&#34;&#63;<br /><span class="note">&#40;word that uses all 7 tiles&#41;</span></legend>
                         <label id="bingo"><input type="checkbox" name="bingo" {{ ($bingo) ? 'CHECKED' : '' }} >Yes</label>
                     </fieldset>

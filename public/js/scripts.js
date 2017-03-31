@@ -1,5 +1,6 @@
 window.onload = function() {
 
+	// SHOW OR HIDE 50-POINT BINGO
 	var word = document.getElementById("word");
 	var addPoints = document.getElementById("addPoints");
 
@@ -7,7 +8,7 @@ window.onload = function() {
 
 		var wordLength = document.getElementById("word").value.length; 
 
-		if( wordLength >= 7) {
+		if(wordLength >= 7) {
 
 			addPoints.style.display = "block";
 
@@ -18,4 +19,4 @@ window.onload = function() {
 		
 	}, false);
 
-}
+} 

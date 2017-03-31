@@ -19,6 +19,7 @@ class ScoreCalculatorController extends Controller
     	$bingo = $request->has('bingo');
     	$score = $request->input('score', null);
     	$calculate = $request->input('calculate', null);
+    	$Hidden = $request->input('Hidden', 'hidden');
 
 		if(isset($calculate)) {
 
@@ -55,6 +56,7 @@ class ScoreCalculatorController extends Controller
 				// INCLUDE 50 POINTS "BINGO" IF WORD HAS 7 OR MORE LETTERS
 				if(($bingo) && ($length >= 7)) {
 					$score += 50;
+					$Hidden = "";
 				}
 	    	}
     	}
@@ -63,7 +65,8 @@ class ScoreCalculatorController extends Controller
     		'word' => $word,
     		'bonus' => $bonus,
     		'bingo' => $request->has('bingo'),
-    		'score' => $score
+    		'score' => $score,
+    		'Hidden' => $Hidden,
     	]);
 
     }
