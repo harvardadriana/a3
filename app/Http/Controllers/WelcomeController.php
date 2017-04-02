@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-	/**
+   	/**
 	 * GET
 	 */
 	public function __invoke() {
@@ -14,5 +14,4 @@ class WelcomeController extends Controller
     	return view('welcome');
     	
 	}
-
 }

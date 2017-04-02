@@ -18,4 +18,4 @@ Route::get('/scrabble', 'ScoreCalculatorController');
 /**
  * a3/
  */
-Route::get('/', 'welcomeController');
+Route::get('/', 'WelcomeController');
