@@ -61,7 +61,7 @@ class ScoreCalculatorController extends Controller
 	    	}
     	}
 
-		return view('welcome')->with([
+		return view('scrabble')->with([
     		'word' => $word,
     		'bonus' => $bonus,
     		'bingo' => $request->has('bingo'),

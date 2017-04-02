@@ -10,6 +10,12 @@ if(config('app.env') == 'local') {
 
 
 /**
+ * a3/scrabble
+ */
+Route::get('/scrabble', 'ScoreCalculatorController');
+
+
+/**
  * a3/
  */
-Route::get('/', 'ScoreCalculatorController');
+Route::get('/', 'welcomeController');
