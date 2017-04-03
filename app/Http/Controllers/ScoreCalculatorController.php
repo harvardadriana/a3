@@ -10,15 +10,15 @@ class ScoreCalculatorController extends Controller
 	/**
 	 * 
 	 */
-	public function __invoke(Request $request) {
+	public function index(Request $request) {
 
 		// RETRIEVE INPUTS
-    	$word = $request->input('word', null);
-    	$bonus = $request->input('bonus', null);
-    	$bingo = $request->has('bingo');
-    	$score = $request->input('score', null);
-    	$calculate = $request->input('calculate', null);
-    	$Hidden = $request->input('Hidden', 'hidden');
+		$word = $request->input('word', null);
+		$bonus = $request->input('bonus', null);
+		$bingo = $request->has('bingo');
+		$score = $request->input('score', null);
+		$calculate = $request->input('calculate', null);
+		$Hidden = $request->input('Hidden', 'hidden');
 
 		if(isset($calculate)) {
 
