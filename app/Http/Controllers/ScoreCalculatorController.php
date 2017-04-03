@@ -12,7 +12,6 @@ class ScoreCalculatorController extends Controller
 	 */
 	public function __invoke(Request $request) {
 
-
 		// RETRIEVE INPUTS
     	$word = $request->input('word', null);
     	$bonus = $request->input('bonus', null);

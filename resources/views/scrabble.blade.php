@@ -30,7 +30,7 @@
 
             <!-- ERROR MESSAGES TO THE USER -->
             @if(count($errors) > 0)
-                <ul>
+                <ul class="errors">
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
