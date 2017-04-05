@@ -23,9 +23,9 @@ class ScoreCalculatorController extends Controller
 		if(isset($calculate)) {
 
 			// VALIDATES INPUT FROM USER
-	        $this->validate($request, [
-	            'word' => 'required|alpha|max:45',
-	        ]);
+			$this->validate($request, [
+				'word' => 'required|alpha|max:45',
+			]);
 
 		   	if($word) {
 
