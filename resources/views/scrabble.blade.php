@@ -26,7 +26,7 @@
 
             <!-- GET WORD FROM PLAYER -->
             <label for="word" class="textinput required" >&#42;Required</label>
-            <input type="text" name="word" id="word" class="textinput" maxlength="15" placeholder="Type your word" value="{{ $word or '' }}" /><br />
+            <input type="text" name="word" id="word" class="textinput" maxlength="15" placeholder="Type your word" value="@if(count($errors) > 0) {{ old('word') }} @else {{ $word or '' }} @endif" /><br />
 
             <!-- ERROR MESSAGES TO THE USER -->
             @if(count($errors) > 0)
